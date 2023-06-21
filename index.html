@@ -12,16 +12,15 @@
       flex-direction: column;
       min-height: 100vh;
       background-color: #290303;
-
     }
     
     header {
       background-color: #8a1313;
       color: #fff;
-      padding: 20px;
+      padding: 2%;
       text-align: center;
-      border-radius: 0 0 20px 20px;
-      margin-bottom: 10px;
+      border-radius: 0 0 3vh 3vh;
+      margin-bottom: 1vh;
     }
     
     h1 {
@@ -31,8 +30,8 @@
     nav {
       margin: auto;
       background-color: #6b1919;
-      padding: 10px;
-      border-radius: 10px;
+      padding: 1%;
+      border-radius: 10vh;
     }
     
     nav ul {
@@ -41,41 +40,52 @@
       padding: 0;
       display: flex;
       justify-content: center;
+      align-items: center;
     }
     
     nav li {
-      margin: 0 10px;
+      margin: 0 1vh;
     }
     
     nav a {
-      color: #fff;
+      color: #ffffff;
       text-decoration: none;
-      padding: 5px 10px;
-      transition: background-color 0.2s ease;
-      border-radius: 5px;
+      padding: 7px 20px;
+      transition: background-color 0.3s ease;
+      border-radius: 20px;
     }
     
     nav a:hover {
       background-color: #cc3333;
     }
     
+    .separator {
+      color: white;
+      font-size: 30px; /* Adjust the font size as needed */
+    }
+
     main {
-      margin: 10px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 10px;
       text-align: center;
       flex-grow: 1;
+      min-width: 400px;
     }
 
     iframe {
       border-radius: 10px;
-    max-width: 100%;
+      max-width: 100%;
     }
     
     img {
-    border-radius: 10px;
-    max-width: 100%;
-    height: auto;
-
-  }
+      border-radius: 10px;
+      max-width: 100%;
+      height: auto;
+    }
+    a:hover img {
+    opacity: 0.8;
+    }
     footer {
       background-color: #a31b1b;
       color: #fff;
@@ -88,9 +98,12 @@
       background-color: #cc4040;
       padding: 20px;
       display: none;
-      border-radius: 10px;
+      border-radius: 30px;
+      color: #fff;
     }
-    
+    .content-window h2 {
+    text-decoration: underline;
+    }
     .active {
       display: block;
     }
@@ -121,16 +134,18 @@
 </head>
 <body>
   <header>
-    <h1>Welcome to Homepage</h1>
+    <h1>Welcome to my Homepage</h1>
   </header>
   
   <nav>
     <ul>
       <li><a href="#home">Home</a></li>
+      <span class="separator">l</span>
       <li><a href="#about">About</a></li>
+      <span class="separator">l</span>
       <li><a href="#projects">Projects</a></li>
+      <span class="separator">l</span>
       <li><a href="#contact">Contact</a></li>
-
     </ul>
   </nav>
   
@@ -143,29 +158,28 @@
     <div id="about" class="content-window">
       <h2>About:</h2>
       <p>Learn more about me.</p>
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/ktk7fK8t-rk?controls=0" title="YouTube video player" frameborder="0" allow="" allowfullscreen></iframe>
-    </div>
+      <p></p>
+      
+      </div>
     <div id="projects" class="content-window">
       <h2>Projects:</h2>
       <p>Check out my latest projects.</p>
-      <a href="https://www.example.com">
-        <img src="https://i1.sndcdn.com/artworks-z56Hm7bDyDvMj5vk-4JThlw-t500x500.jpg" alt="Homepage Image" width="500" height="500">
-      </a>
-      <style>
-        img {
-        border-radius: 10px;
-        }     
-        a:hover img {
-          opacity: 0.8;
-        }
-      </style>
-      
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/z8J1O7vvtNg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/ktk7fK8t-rk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>  
+    
     </div>
     <div id="contact" class="content-window">
       <h2>Contact:</h2>
       <p>Get in touch with me.</p>
-      <a href="https://www.example.com">Visit Example Website</a>
+      <p>jonathanmaak@gmx.de</p>
+      
+      <a href="https://www.youtube.com/@redstonej0727">
+        <img src="https://cdn.discordapp.com/attachments/914103153258020894/1121149446630154352/partikelless-min.png" alt="Homepage Image" width="50" height="50">
+      </a>
+      <p></p>
+      <a href="https://www.youtube.com/@redstonej0727">My YouTube</a>
     </div>
+    
   </main>
 
   <footer>
