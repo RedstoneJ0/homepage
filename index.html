@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Homepage</title>
+  <style>
+    /* CSS styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      background-color: #290303;
+
+    }
+    
+    header {
+      background-color: #8a1313;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+      border-radius: 0 0 20px 20px;
+      margin-bottom: 10px;
+    }
+    
+    h1 {
+      margin: 0;
+    }
+    
+    nav {
+      margin: auto;
+      background-color: #6b1919;
+      padding: 10px;
+      border-radius: 10px;
+    }
+    
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+    }
+    
+    nav li {
+      margin: 0 10px;
+    }
+    
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      padding: 5px 10px;
+      transition: background-color 0.2s ease;
+      border-radius: 5px;
+    }
+    
+    nav a:hover {
+      background-color: #cc3333;
+    }
+    
+    main {
+      margin: 10px;
+      text-align: center;
+      flex-grow: 1;
+    }
+
+    iframe {
+      border-radius: 10px;
+    max-width: 100%;
+    }
+    
+    img {
+    border-radius: 10px;
+    max-width: 100%;
+    height: auto;
+
+  }
+    footer {
+      background-color: #a31b1b;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+      border-radius: 20px 20px 0 0;
+    }
+    
+    .content-window {
+      background-color: #cc4040;
+      padding: 20px;
+      display: none;
+      border-radius: 10px;
+    }
+    
+    .active {
+      display: block;
+    }
+  </style>
+  <script>
+    // JavaScript code
+    document.addEventListener("DOMContentLoaded", function() {
+      const navLinks = document.querySelectorAll("nav a");
+      const contentWindows = document.querySelectorAll(".content-window");
+      
+      navLinks.forEach(function(link) {
+        link.addEventListener("click", function(e) {
+          e.preventDefault();
+          const target = this.getAttribute("href").substring(1);
+          
+          contentWindows.forEach(function(window) {
+            window.classList.remove("active");
+          });
+          
+          const contentWindow = document.getElementById(target);
+          if (contentWindow) {
+            contentWindow.classList.add("active");
+          }
+        });
+      });
+    });
+  </script>
+</head>
+<body>
+  <header>
+    <h1>Welcome to Homepage</h1>
+  </header>
+  
+  <nav>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+
+    </ul>
+  </nav>
+  
+  <main>
+    <div id="home" class="content-window active">
+      <h2>Home:</h2>
+      <img src="https://cdn.discordapp.com/attachments/1105064773923647630/1121100539862720512/Townscaper_2022-04-03_01-16-00.png" alt="Homepage Image" width="500" height="500">
+      <p>Welcome to the homepage!</p>
+    </div>
+    <div id="about" class="content-window">
+      <h2>About:</h2>
+      <p>Learn more about me.</p>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/ktk7fK8t-rk?controls=0" title="YouTube video player" frameborder="0" allow="" allowfullscreen></iframe>
+    </div>
+    <div id="projects" class="content-window">
+      <h2>Projects:</h2>
+      <p>Check out my latest projects.</p>
+      <a href="https://www.example.com">
+        <img src="https://i1.sndcdn.com/artworks-z56Hm7bDyDvMj5vk-4JThlw-t500x500.jpg" alt="Homepage Image" width="500" height="500">
+      </a>
+      <style>
+        img {
+        border-radius: 10px;
+        }     
+        a:hover img {
+          opacity: 0.8;
+        }
+      </style>
+      
+    </div>
+    <div id="contact" class="content-window">
+      <h2>Contact:</h2>
+      <p>Get in touch with me.</p>
+      <a href="https://www.example.com">Visit Example Website</a>
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2023 Homepage. All rights reserved.
+  </footer>
+</body>
+</html>
